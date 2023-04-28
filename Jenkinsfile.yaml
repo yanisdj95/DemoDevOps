@@ -11,6 +11,7 @@ pipeline {
 
     stage('Checkout Sources') {
       steps {
+        echo "Checkout Job"
         git 'https://github.com/yanisdj95/DemoDevOps'
       }
     }
@@ -18,6 +19,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
+          echo "Build job"
           dockerImage = docker.build dockerimagename
         }
       }
