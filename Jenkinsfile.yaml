@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Sources') {
       steps {
-        git 'https://github.com/yanisdj95/DemoDevOps'
+        git branch: 'main', url: 'https://github.com/yanisdj95/DemoDevOps'
       }
     }
 
